@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">сдатьмоюеду</string>
+    <string name="title_activity_burger_menu">БургерМеню</string>
+    <string name="navigation_drawer_open">Открыть панель навигации</string>
+    <string name="navigation_drawer_close">Закрыть панель навигации</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Заголовок навигации</string>
+    <string name="action_settings">настройки</string>
+    <string name="open">открыто</string>
+    <string name="close">Закрыть</string>
+
+    <string name="menu_home">Дом</string>
+    <string name="menu_gallery">Галерея</string>
+    <string name="menu_slideshow">Слайд-шоу</string>
+    <string name="burgerbuttonmenu">Меню кнопки бургера</string>
+    <string name="title_activity_test">Основная деятельность</string>
+    <string name="title_home">Дом</string>
+    <string name="title_dashboard">Приборная панель</string>
+    <string name="title_overview">Обзор</string>
+    <string name="title_activity_navigation_bar">Основная деятельность</string>
+    <string name="delete">Удалить</string>
+    <string name="MenuButtonHomeFragment">Фрагмент главного меню кнопки меню</string>
+    <string name="add_meal">Добавить еду</string>
+    <string name="enter_menu">Войти в меню..</string>
+    <string name="save">спасти</string>
+    <string name="cancel">отменить</string>
+    <string name="add_entry">Добавить запись...</string>
+    <string name="meat">Мясо</string>
+    <string name="vegetarian">Вегетарианский</string>
+    <string name="special">Специальный</string>
+    <string name="add">Добавлять</string>
+    <string name="changeLanguage">язык</string>
+    <string name="chooseLanguage">выберите язык:</string>
+
+</resources>

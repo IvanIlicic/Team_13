@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">DealMyMeal</string>
+    <string name="title_activity_burger_menu">BurgerMenu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="burgerbuttonmenu">BurgerButtonMenu</string>
+    <string name="title_activity_test">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_overview">Overview</string>
+    <string name="title_activity_navigation_bar">MainActivity</string>
+    <string name="delete">Delete</string>
+    <string name="MenuButtonHomeFragment">MenuButtonHomeFragment</string>
+    <string name="add_meal">Add Meal</string>
+    <string name="enter_menu">Enter menu..</string>
+    <string name="save">save</string>
+    <string name="cancel">cancel</string>
+    <string name="add_entry">Add Entry...</string>
+    <string name="meat">Meat</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="special">Special</string>
+    <string name="add">Add</string>
+    <string name="changeLanguage">Language</string>
+    <string name="chooseLanguage">Choose Language:</string>
+</resources>
