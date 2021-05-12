@@ -3,6 +3,7 @@
     package="com.team13.dealmymeal">
 
     <application
+        android:name=".MealApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,10 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DealMyMeal">
 
-        <activity
-            android:name=".BurgerMenu"
-            android:label="@string/title_activity_burger_menu"
-            android:theme="@style/Theme.DealMyMeal.NoActionBar"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

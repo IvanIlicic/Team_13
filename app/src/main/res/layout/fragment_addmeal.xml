@@ -2,101 +2,133 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_addMeal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.AddMealFragment"
+    android:backgroundTint="#F0F4F8"
     android:paddingBottom="60dp"
-    android:id="@+id/fragment_addMeal"
+    tools:context=".ui.home.AddMealFragment"
+
     >
-
-
-    <ImageButton
-        android:id="@+id/btnmenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/MenuButtonHomeFragment"
-        android:src="@drawable/ic_burger_menu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:paddingBottom="10dp"/>
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_bar_id"
-        android:layout_width="294dp"
-        android:layout_height="500dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnmenu" />
-
-
 
     <EditText
         android:id="@+id/form_edit"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:background="#F0F4F8"
         android:hint="@string/enter_menu"
-        app:layout_constraintBottom_toTopOf="@+id/check_veggie"
-        app:layout_constraintStart_toStartOf="parent"
         android:inputType="text"
-        android:autofillHints="" />
+        android:textAlignment="center"
+        android:textColor="#A6BCD0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/form_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#41D359"
         android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/form_ratingBar" />
 
     <RatingBar
         android:id="@+id/form_ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:numStars="4"
+        android:stepSize="1"
         app:layout_constraintBottom_toTopOf="@+id/form_save"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Switch
+        android:id="@+id/check_meat"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/meat"
+        android:textColor="#748A9D"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Switch
+        android:id="@+id/check_veggie"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/vegetarian"
+        android:textColor="#748A9D"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_special" />
+
+    <Switch
+        android:id="@+id/check_special"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/special"
+        android:textColor="#748A9D"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_meat" />
 
     <TextView
-        android:id="@+id/form_showEntry"
-        android:layout_width="400dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_entry"
-        android:textSize="40sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/meal_name"
+        android:textColor="#748A9D"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/form_edit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/check_meat"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/meat"
-        app:layout_constraintBottom_toTopOf="@+id/form_ratingBar"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="24dp"
+        android:text="@string/meal_category"
+        android:textColor="#748A9D"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/form_edit" />
 
-    <CheckBox
-        android:id="@+id/check_veggie"
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/vegetarian"
-
-        app:layout_constraintBottom_toTopOf="@+id/form_ratingBar"
-        app:layout_constraintEnd_toStartOf="@+id/check_special"
-        app:layout_constraintStart_toEndOf="@+id/check_meat" />
-
-    <CheckBox
-        android:id="@+id/check_special"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/special"
-        app:layout_constraintBottom_toTopOf="@+id/form_ratingBar"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
-
+        android:layout_marginTop="24dp"
+        android:text="@string/meal_rating"
+        android:textColor="#748A9D"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check_veggie" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

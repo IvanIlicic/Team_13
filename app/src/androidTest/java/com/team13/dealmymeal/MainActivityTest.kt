@@ -1,15 +1,20 @@
 package com.team13.dealmymeal
 
+import android.widget.Button
 import androidx.test.espresso.Espresso
+import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.ViewAssertion
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
-import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
+import androidx.test.ext.junit.rules.activityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.rule.ActivityTestRule
+import org.hamcrest.CoreMatchers.anything
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
@@ -32,40 +37,37 @@ class MainActivityTest{
     }
 
     @Test
-    fun buttonExists()
+    fun changeLanguageButtonClickable()
     {
-      onView(withId(R.id.btnmenu)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-    }
-
-
-    @Test
-    fun buttonClickable()
-    {
-        onView(withId(R.id.btnmenu)).perform(click())
+        Espresso.onView(ViewMatchers.withId(R.id.navigation_dashboard)).perform(ViewActions.click())
+        onView(withId(R.id.changeLanguageButton)).perform(click())
     }
 
     @Test
-    fun menuOpen()
+    fun languageAlertDialog()
     {
-        onView(withId(R.id.btnmenu)).perform(click())
-        onView(withId(R.id.nav_bar_id)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-
+        Espresso.onView(ViewMatchers.withId(R.id.navigation_dashboard)).perform(ViewActions.click())
+        onView(withId(R.id.changeLanguageButton)).perform(click());
+        onData(anything()).atPosition(1).perform(click());
+        onView(withId(R.id.changeLanguageButton)).perform(click());
+        onData(anything()).atPosition(0).perform(click());
     }
 
     @Test
-    fun openViewBar()
+    fun languageCheck()
     {
-        onView(withId(R.id.btnmenu)).perform(click())
-        onView(withId(R.id.nav_bar_id)).check(ViewAssertions.matches(ViewMatchers.withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
+        Espresso.onView(ViewMatchers.withId(R.id.navigation_dashboard)).perform(ViewActions.click())
+        onView(withId(R.id.changeLanguageButton)).perform(click())
+        onData(anything()).atPosition(1).perform(click())
+        Espresso.onView(ViewMatchers.withId(R.id.navigation_addMeal)).perform(ViewActions.click())
+        Espresso.onView(withText("save")).check(ViewAssertions.matches(isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.navigation_dashboard)).perform(ViewActions.click())
+        onView(withId(R.id.changeLanguageButton)).perform(click())
+        onData(anything()).atPosition(0).perform(click())
+        Espresso.onView(ViewMatchers.withId(R.id.navigation_addMeal)).perform(ViewActions.click())
+        Espresso.onView(withText("спасти")).check(ViewAssertions.matches(isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.navigation_dashboard)).perform(ViewActions.click())
+        onView(withId(R.id.changeLanguageButton)).perform(click())
+        onData(anything()).atPosition(1).perform(click())
     }
-
-    @Test
-    fun closeViewBar()
-    {
-        onView(withId(R.id.btnmenu)).perform(click())
-        onView(withId(R.id.btnmenu)).perform(click())
-        onView(withId(R.id.nav_bar_id)).check(ViewAssertions.matches(ViewMatchers.withEffectiveVisibility(ViewMatchers.Visibility.INVISIBLE)))
-    }
-
-
 }

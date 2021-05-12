@@ -16,22 +16,29 @@
     <string name="menu_slideshow">Слайд-шоу</string>
     <string name="burgerbuttonmenu">Меню кнопки бургера</string>
     <string name="title_activity_test">Основная деятельность</string>
-    <string name="title_home">Дом</string>
+    <string name="title_addmeal">добавить еду</string>
     <string name="title_dashboard">Приборная панель</string>
     <string name="title_overview">Обзор</string>
     <string name="title_activity_navigation_bar">Основная деятельность</string>
     <string name="delete">Удалить</string>
     <string name="MenuButtonHomeFragment">Фрагмент главного меню кнопки меню</string>
-    <string name="add_meal">Добавить еду</string>
+    <string name="meal_name">Название еды</string>
+    <string name="meal_category">Категория</string>
+    <string name="meal_rating">Рейтинг</string>
     <string name="enter_menu">Войти в меню..</string>
     <string name="save">спасти</string>
     <string name="cancel">отменить</string>
     <string name="add_entry">Добавить запись...</string>
+    <string name="add_meal">Добавить еду</string>
     <string name="meat">Мясо</string>
     <string name="vegetarian">Вегетарианский</string>
     <string name="special">Специальный</string>
     <string name="add">Добавлять</string>
     <string name="changeLanguage">язык</string>
     <string name="chooseLanguage">выберите язык:</string>
+    <string name="action_search">поиск</string>
+    <string name="search_hint">поиск...</string>
+    <string name="action_filter">Фильтр</string>
+    <string name="welcome_text">Добавьте блюда в свой список \n чтобы получать ежедневные блюда!</string>
 
 </resources>
