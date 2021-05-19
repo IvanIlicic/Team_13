@@ -1,10 +1,16 @@
 package com.team13.dealmymeal
 
+import android.view.InputDevice
+import android.view.MotionEvent
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.UiController
 import androidx.test.espresso.ViewAction
-import com.team13.dealmymeal.dummy.DummyContent
+import androidx.test.espresso.action.GeneralClickAction
+import androidx.test.espresso.action.GeneralLocation
+import androidx.test.espresso.action.Press
+import androidx.test.espresso.action.Tap
+import androidx.test.espresso.action.ViewActions.actionWithAssertions
 import com.team13.dealmymeal.ui.overview.MealOverviewAdapter
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.any

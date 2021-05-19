@@ -7,9 +7,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="#F0F4F8"
     android:paddingBottom="60dp"
-    tools:context=".ui.home.AddMealFragment"
-
-    >
+    tools:context=".ui.home.AddMealFragment">
 
     <EditText
         android:id="@+id/form_edit"
@@ -17,11 +15,11 @@
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:autofillHints=""
-        android:background="#F0F4F8"
         android:hint="@string/enter_menu"
         android:inputType="text"
         android:textAlignment="center"
         android:textColor="#A6BCD0"
+        android:background="?attr/add_meal_edit_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

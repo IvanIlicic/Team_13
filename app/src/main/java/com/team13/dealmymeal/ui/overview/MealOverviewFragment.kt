@@ -1,5 +1,6 @@
 package com.team13.dealmymeal.ui.overview
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -74,12 +75,11 @@ class MealOverviewFragment : Fragment(), ActionMode.Callback, SearchView.OnQuery
                     MealOverviewAdapter.MyItemDetailsLookup(
                         view
                     ),
-                    StorageStrategy.createParcelableStorage(Meal::class.java)
+                    StorageStrategy.createParcelableStorage(Meal::class.java)//createParcelableStorage(Meal::class.java)
                 ).withSelectionPredicate(
                     SelectionPredicates.createSelectAnything()
                 ).build()
 
-                (adapter as MealOverviewAdapter).tracker = tracker
 
                 tracker?.addObserver(
                     object : SelectionTracker.SelectionObserver<Meal>() {
@@ -88,22 +88,33 @@ class MealOverviewFragment : Fragment(), ActionMode.Callback, SearchView.OnQuery
                             tracker?.let {
                                 selectedPostItems = it.selection.toMutableList()
 
+
                                 // TODO enable this when implementing delete
-                                /*
+
                                 if (selectedPostItems.isEmpty()) {
                                     actionMode?.finish()
                                 } else {
                                     if (actionMode == null) actionMode = parent.startActionModeForChild(view, this@MealOverviewFragment)
                                     actionMode?.title =
                                         "${selectedPostItems.size}"
-                                }*/
+                                    for (item in selectedPostItems) {
+                                       // (view as RecyclerView).findViewHolderForItemId(item).
+                                      //  ((view as RecyclerView).findViewHolderForItemId(item) as MealOverviewAdapter.ViewHolder?)?.setItemSelected(item, true)
+
+                                    }
+                                   // (adapter as MealOverviewAdapter).notifyDataSetChanged()
+
+                                }
 
                                 // TODO delete
+
+
                             }
                         }
                     })
-                overviewAdapter = adapter as MealOverviewAdapter
 
+                overviewAdapter = adapter as MealOverviewAdapter
+                overviewAdapter!!.tracker = tracker
                 // Add an observer on the LiveData returned by getAll.
                 // The onChanged() method fires when the observed data changes and the activity is
                 // in the foreground.
@@ -121,11 +132,20 @@ class MealOverviewFragment : Fragment(), ActionMode.Callback, SearchView.OnQuery
     override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.action_view_delete -> {
-                Toast.makeText(
-                    context,
-                    selectedPostItems.toString(),
-                    Toast.LENGTH_LONG
-                ).show()
+                val builder = AlertDialog.Builder(context)
+                builder.setMessage(R.string.delete_message)
+                        .setCancelable(false)
+                        .setPositiveButton(R.string.yes) { dialog, id ->
+                            // Delete selected note from database
+                            for (meal in selectedPostItems)
+                                mealViewModel.delete(meal)
+                        }
+                        .setNegativeButton(R.string.no) { dialog, id ->
+                            // Dismiss the dialog
+                            dialog.dismiss()
+                        }
+                val alert = builder.create()
+                alert.show()
             }
         }
         return true
