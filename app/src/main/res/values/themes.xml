@@ -12,11 +12,14 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="actionModeBackground">@color/green</item>
-        <item name="actionModeCloseDrawable">@drawable/ic_round_close_24</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_close</item>
 
-        <item name="dashboard_bg">@drawable/ic_background2</item>
+        <item name="dashboard_bg">@drawable/ic_background_dashboard</item>
         <item name="add_meal_edit_bg">@color/edit_light</item>
         <item name="meal_item_txt">@color/light_gray</item>
+        <item name="overview_item_bg">@color/ic_card_bg_l</item>
+        <item name="overview_item_1">@drawable/ic_background_meal_orange</item>
+        <item name="overview_item_2">@drawable/ic_background_meal_green</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -26,6 +29,5 @@
     </style>
 
     <style name="Theme.DealMyMeal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="Theme.DealMyMeal.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

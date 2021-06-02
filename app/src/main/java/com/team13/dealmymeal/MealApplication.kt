@@ -1,6 +1,8 @@
 package com.team13.dealmymeal
 
 import android.app.Application
+import com.team13.dealmymeal.data.DBManager
+import com.team13.dealmymeal.data.MealRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 

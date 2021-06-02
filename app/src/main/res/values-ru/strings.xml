@@ -10,7 +10,6 @@
     <string name="action_settings">настройки</string>
     <string name="open">открыто</string>
     <string name="close">Закрыть</string>
-
     <string name="menu_home">Дом</string>
     <string name="menu_gallery">Галерея</string>
     <string name="menu_slideshow">Слайд-шоу</string>
@@ -19,8 +18,12 @@
     <string name="title_addmeal">добавить еду</string>
     <string name="title_dashboard">Приборная панель</string>
     <string name="title_overview">Обзор</string>
+    <string name="title_edit">Изменить еду</string>
     <string name="title_activity_navigation_bar">Основная деятельность</string>
     <string name="delete">Удалить</string>
+    <string name="delete_message">Вы уверены, что хотите удалить свой выбор?</string>
+    <string name="yes">да</string>
+    <string name="no">нет</string>
     <string name="MenuButtonHomeFragment">Фрагмент главного меню кнопки меню</string>
     <string name="meal_name">Название еды</string>
     <string name="meal_category">Категория</string>
@@ -39,6 +42,24 @@
     <string name="action_search">поиск</string>
     <string name="search_hint">поиск...</string>
     <string name="action_filter">Фильтр</string>
+    <string name="chooseMeat">Мясо</string>
+    <string name="chooseSpecial">Специальный</string>
+    <string name="chooseVeggie">Вегетарианский</string>
+    <string name="chooseCategory">выберите категорию: </string>
+    <string name="action_filter_star">Фильтр</string>
     <string name="welcome_text">Добавьте блюда в свой список \n чтобы получать ежедневные блюда!</string>
+    <string name="chooseRating">Фильтр по рейтингу:</string>
+    <string name="toastEmptyMeal">Название блюда не может быть пустым!</string>
+    <string name="toast_add_duplicate_error">Это блюдо уже существует</string>
+
+    <string-array name="categories">
+        <item>Мясо</item>
+        <item>Вегетарианский</item>
+        <item>Специальный</item>
+    </string-array>
+
+    <string name="mealAdded">Еда %1$s добавлена!</string>
+    <string name="days">дней</string>
+    <string name="meals_per_day">Питание в день</string>
 
 </resources>

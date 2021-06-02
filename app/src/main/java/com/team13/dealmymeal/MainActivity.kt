@@ -1,10 +1,7 @@
 package com.team13.dealmymeal
 
 import android.annotation.SuppressLint
-import android.app.AlertDialog
 import android.content.Context
-import android.content.Intent
-import android.content.res.Configuration
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,19 +11,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import android.view.Menu
-import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.Switch
-import android.widget.TextView
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.widget.SwitchCompat
-import androidx.core.os.ConfigurationCompat
-import com.google.android.material.navigation.NavigationView
 import androidx.room.Room
+import com.team13.dealmymeal.data.DBManager
 import java.util.*
 
 
@@ -82,6 +69,11 @@ class MainActivity : AppCompatActivity() {
         val localeToSet: String = sharedPref.getString("pref_locale_string", "")!!
         setLocale(localeToSet)
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 

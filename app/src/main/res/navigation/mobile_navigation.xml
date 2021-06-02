@@ -7,22 +7,36 @@
 
     <fragment
         android:id="@+id/navigation_addMeal"
-        android:name="com.team13.dealmymeal.ui.home.AddMealFragment"
+        android:name="com.team13.dealmymeal.ui.addmeal.AddMealFragment"
         android:label="@string/title_addmeal"
-        tools:layout="@layout/fragment_addmeal"
-        />
+        tools:layout="@layout/fragment_addmeal" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.team13.dealmymeal.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard"
-
-        />
+        tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_overview"
         android:name="com.team13.dealmymeal.ui.overview.MealOverviewFragment"
         android:label="@string/title_overview"
-        tools:layout="@layout/fragment_meal_overview_list" />
+        tools:layout="@layout/fragment_meal_overview_list" >
+        <action
+            android:id="@+id/action_navigation_overview_to_editMealFragment"
+            app:destination="@id/editMealFragment"
+            app:popUpTo="@id/navigation_overview"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editMealFragment"
+        android:name="com.team13.dealmymeal.ui.editmeal.EditMealFragment"
+        android:label="@string/title_edit"
+        tools:layout="@layout/fragment_editmeal" >
+        <argument
+            android:name="Meal"
+            app:argType="com.team13.dealmymeal.data.Meal" />
+    </fragment>
+
 </navigation>

@@ -38,7 +38,6 @@ class MealOverviewInstrumentedTest {
     fun overview_clicked() {
         onView(withId(R.id.navigation_overview)).perform(click())
         onView(withId(R.id.list)).check(matches(isDisplayed()))
-        onView(withId(R.id.list)).perform(RecyclerViewMatcher.populate(15))
         Thread.sleep(500)
     }
 

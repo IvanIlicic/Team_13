@@ -1,13 +1,14 @@
 package com.team13.dealmymeal
 
 import android.content.Context
-import androidx.fragment.app.viewModels
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
+import com.team13.dealmymeal.data.DBManager
+import com.team13.dealmymeal.data.Meal
+import com.team13.dealmymeal.data.MealDao
 import junit.framework.TestCase
-import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.runBlocking
 import org.junit.*
 import org.junit.runner.RunWith
@@ -40,7 +41,7 @@ class DBManagerTest: TestCase() {
     // is present in the db -- if the item is present then our test cases pass
     @Test
     fun writeAndReadLanguage() = runBlocking {
-        val meal = Meal("Spaghetti", listOf("Special"), 0f)
+        val meal = Meal("Spaghetti", listOf(0), 0f)
         mealDao.insert(meal)
         //val allMeals = mealDao.getAll().toList()
         val allMeals = mealDao.getAllTest()

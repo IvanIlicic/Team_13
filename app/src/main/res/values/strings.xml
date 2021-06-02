@@ -9,7 +9,6 @@
     <string name="action_settings">Settings</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -18,6 +17,7 @@
     <string name="title_addmeal">Add Meal</string>
     <string name="title_dashboard">Generate</string>
     <string name="title_overview">Overview</string>
+    <string name="title_edit">Edit Meal</string>
     <string name="title_activity_navigation_bar">MainActivity</string>
     <string name="delete">Delete</string>
     <string name="delete_message">Are you sure you want to delete your selection?</string>
@@ -27,6 +27,7 @@
     <string name="action_search">Search</string>
     <string name="search_hint">Search...</string>
     <string name="action_filter">Filter</string>
+    <string name="action_filter_star">Filter</string>
     <string name="add_meal">Add Meal</string>
     <string name="enter_menu">Enter the Name of your meal!</string>
     <string name="save">save</string>
@@ -42,4 +43,21 @@
     <string name="meal_category">Category</string>
     <string name="meal_rating">Rating</string>
     <string name="welcome_text">Add meals to your list \n here to generate your daily meal!</string>
+    <string name="toast_add_duplicate_error">This meal already exists</string>
+    <string name="toastEmptyMeal">Meal Name can´t be empty!</string>
+    <string name="chooseMeat">Meat</string>
+    <string name="chooseSpecial">Special</string>
+    <string name="chooseVeggie">Veggie</string>
+    <string name="chooseCategory">Choose your category: </string>
+
+    <string-array name="categories">
+        <item>Meat</item>
+        <item>Vegetarian</item>
+        <item>Special</item>
+    </string-array>
+
+    <string name="chooseRating">Filter by Rating:</string>
+    <string name="mealAdded">Meal %1$s added!</string>
+    <string name="days">Days</string>
+    <string name="meals_per_day">Meals per day</string>
 </resources>

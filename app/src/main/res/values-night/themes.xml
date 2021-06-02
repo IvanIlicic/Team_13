@@ -12,8 +12,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="dashboard_bg">@drawable/ic_background_dark</item>
+        <item name="dashboard_bg">@drawable/ic_background_dashboard_dark</item>
         <item name="add_meal_edit_bg">@color/edit_dark</item>
-        <item name="meal_item_txt">@color/dark_gray</item>
+        <item name="meal_item_txt">@color/card_normal</item>
+        <item name="overview_item_bg">@color/ic_card_bg_d</item>
+        <item name="overview_item_1">@drawable/ic_background_meal_purple</item>
+        <item name="overview_item_2">@drawable/ic_background_meal_blue</item>
     </style>
 </resources>
